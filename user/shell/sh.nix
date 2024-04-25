@@ -6,6 +6,7 @@ let
     ll = "ls -l";
     ".." = "cd ..";
     "vim" = "nvim";
+    "config" = "cd ~/.dotfiles";
   };
 
 in
