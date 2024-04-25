@@ -28,7 +28,7 @@ map('n', '<leader>8', '8gt', {})
 map('n', '<leader>9', '9gt', {})
 map('n', '<leader>0', '10gt', {})
 map('n', '<leader>n', ':tabnew\n', {})
-    ''
+    '';
   };
 
 }
