@@ -10,7 +10,7 @@
   imports = [
     ../user/shell/sh.nix
     ../user/apps/alacritty.nix
-    ../user/apps/neovim.nix
+    ../user/apps/neovim/neovim.nix
   ];
 
   # This value determines the Home Manager release that your configuration is
