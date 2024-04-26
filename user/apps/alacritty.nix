@@ -12,10 +12,10 @@
       };
       font = {
         normal = {
-	  family = "Hack";
-	  style = "Regular";
-	};
-	size = 8.0;
+	        family = "Hack";
+	        style = "Regular";
+	      };
+	      size = 8.0;
       };
     };
   };
