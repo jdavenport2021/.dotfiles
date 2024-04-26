@@ -13,6 +13,11 @@
     plugins = with pkgs.vimPlugins; [
       neo-tree-nvim
       tokyonight-nvim
+      plenary-nvim
+      nui-nvim
+      nvim-web-devicons
+      indent-blankline-nvim
+      which-key-nvim
     ];
     extraLuaConfig = ''
 --[[ init.lua ]]
@@ -28,6 +33,10 @@ local map = vim.api.nvim_set_keymap
 -- remap the key used to leave insert mode
 map('i', 'jk', '<Esc>', {})
 
+-- THEME
+vim.cmd[[colorscheme tokyonight-night]]
+
+-- [[ opts.lua ]]
 local opt = vim.opt
 
 -- [[ Context ]]
@@ -60,6 +69,8 @@ opt.tabstop = 2                  -- num:  Number of spaces tabs count for
 -- [[ Splits ]]
 opt.splitright = true            -- bool: Place new window to right of current one
 opt.splitbelow = true            -- bool: Place new window below the current one
+
+require("ibl").setup()
     '';
   };
 
