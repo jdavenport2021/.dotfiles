@@ -16,17 +16,24 @@
       pkgs = nixpkgs.legacyPackages.${system};
   in
   {
-    nixosConfigurations = {
+    nixosConfigurations.framework = {
       nixos = lib.nixosSystem {
         inherit system;
-        modules = [ ./nixos/configuration.nix ];
+        modules = [ ./nixos/framework/configuration.nix ];
+      };
+    };
+
+    nixosConfigurations.pc = {
+      nixos = lib.nixosSystem {
+        inherit system;
+        modules = [ ./nixos/PC/configuration.nix ];
       };
     };
 
     homeConfigurations = {
       jed = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-	modules = [ ./home-manager/home.nix ];
+	      modules = [ ./home-manager/home.nix ];
       };
     };
   };
