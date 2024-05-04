@@ -15,7 +15,7 @@
 	        family = "Hack";
 	        style = "Regular";
 	      };
-	      size = 8.0;
+	      # size = 8.0;
       };
     };
   };
