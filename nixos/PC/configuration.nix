@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../user/shell/enable-zsh.nix
     ];
 
   # Bootloader.
@@ -50,13 +51,13 @@
   services.xserver.desktopManager.plasma5.enable = true;
 
   # Enable zsh
-  environment.shells = with pkgs; [ zsh ];
-  users.defaultUserShell = pkgs.zsh;
-  programs.zsh = {
-    enable = true;
-    ohMyZsh.enable = true;
-    ohMyZsh.theme = "agnoster";
-  };  
+  #environment.shells = with pkgs; [ zsh ];
+  #users.defaultUserShell = pkgs.zsh;
+  #programs.zsh = {
+  #  enable = true;
+  #  ohMyZsh.enable = true;
+  #  ohMyZsh.theme = "agnoster";
+  #};  
 
 # Configure keymap in X11
   services.xserver.xkb = {
